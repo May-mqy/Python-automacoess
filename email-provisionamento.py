@@ -21,7 +21,6 @@ print(tabela)
 
 ##Preparando os dados e montando o Email
 for linha in tabela.index:
-
     id_elaw = tabela.loc[linha, "ID Processo"]
     auto_infracao = tabela.loc[linha, "Notificação/Número"]
     base = tabela.loc[linha, "Base Código"]
