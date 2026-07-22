@@ -20,10 +20,10 @@ tabela = pd.read_excel("cadastrar.xlsx")
 print(tabela)
 
 ## Entrar no Outlook 
-py.press("win") # Apertar Tecla Windows
-py.write("Outl") # - Procurar o navegador ou programa usado
-py.press("enter") # - Apertar Enter para abrir o Aplicativo
-time.sleep(10) # tempo para carregar
+# py.press("win") # Apertar Tecla Windows
+# py.write("Outl") # - Procurar o navegador ou programa usado
+# py.press("enter") # - Apertar Enter para abrir o Aplicativo
+# time.sleep(10) # tempo para carregar
 
 
 ## Preparando os itens e Montando o Email
@@ -44,7 +44,7 @@ for linha in tabela.index:
 
     Att,
     """
-     
+    
     time.sleep(5)
     py.hotkey('ctrl', 'n') #Começar a escrever novo Email
     print("Começando a escrever Email")
