@@ -16,7 +16,7 @@ py.FAILSAFE = True
 py.PAUSE = 0.7
 
 ## Importar a Planilha de Cadastros para noção dos dadaos
-tabela = pd.read_excel("cadastrar.xlsx")
+tabela = pd.read_excel("provisionamento.xlsx")
 print(tabela)
 
 ## Entrar no Outlook 
