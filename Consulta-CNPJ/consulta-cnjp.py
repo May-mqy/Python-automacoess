@@ -17,19 +17,21 @@ import pandas as pd
 import pdfplumber
 import openpyxl
 from selenium import webdriver
-from selenium.webdriver.support.ui import Select
-import os
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-
-select = Select(driver.find_element("id", "estado"))
-select.select_by_visible_text("São Paulo")
 
 site_consulta = "https://www.prt2.mpt.mp.br/servicos/certidao-positiva-negativa"
 
 driver = webdriver.Chrome()
+driver.get(site_consulta) #Abrindo o site
 
-driver.get(site_consulta)
 
+campo_cnpj = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((By.ID, "cnpj"))
+)
+campo_cnpj.send_keys("09.296.295/0001-60")
 
 
 ##Substituição do Time.sleep:
