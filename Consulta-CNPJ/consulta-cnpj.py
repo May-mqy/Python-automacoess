@@ -47,16 +47,11 @@ campo_consulta = WebDriverWait(driver, 30).until(
     EC.element_to_be_clickable((By.ID, "codin_consultar"))
 ) 
 campo_consulta.click()
-print("Botão consulta clicado! Irá carregar para a próxima página")
-time.sleep(5)
+print("Irá carregar para a próxima página")
+time.sleep(8)
 
-botao_imprimir = driver.execute_script("""
-return document.querySelector('print-preview-app')
-.shadowRoot.querySelector('print-preview-sidebar')
-.shadowRoot.querySelector('cr-button.action-button');
-""")
-
-print(botao_imprimir)
+py.press('enter')
+print("Está baixando o documento?")
 
 # print("Localizando campo imprimir para guardar PDF")
 # campo_imprimir = WebDriverWait(driver, 10).until(
@@ -66,10 +61,10 @@ print(botao_imprimir)
 # print("Botão imprimir clicado! Aguardando download")
 
 # Certificação da onde o documento será baixado (dentro da pasta da automação)
-# pasta_download = os.path.dirname(os.path.abspath(__file__))
+pasta_download = os.path.dirname(os.path.abspath(__file__))
 
-# cnpj_arquivo = cnpj_azul.replace("/", "-")
-# nome_arquivo = f"certidao de feitos cnpj {cnpj_arquivo}.pdf"
+cnpj_arquivo = cnpj_azul.replace("/", "-")
+nome_arquivo = f"certidao de feitos cnpj {cnpj_arquivo}.pdf"
 
 # caminho_arquivo = os.path.join(
 #     pasta_download,
@@ -77,8 +72,9 @@ print(botao_imprimir)
 # )
 
 # Digita o caminho completo na janela "Salvar como"
-# py.write(caminho_arquivo)
-# py.press("enter")
+print("Escrevendo o nome no salvar")
+py.write(nome_arquivo)
+py.press("enter")
 
 
 # time.sleep(3)  
