@@ -19,11 +19,11 @@ py.PAUSE = 0.7
 tabela = pd.read_excel("provisionamento.xlsx")
 print(tabela)
 
-## Entrar no Outlook 
-# py.press("win") # Apertar Tecla Windows
-# py.write("Outl") # - Procurar o navegador ou programa usado
-# py.press("enter") # - Apertar Enter para abrir o Aplicativo
-# time.sleep(10) # tempo para carregar
+# Entrar no Outlook 
+py.press("win") # Apertar Tecla Windows
+py.write("Outl") # - Procurar o navegador ou programa usado
+py.press("enter") # - Apertar Enter para abrir o Aplicativo
+time.sleep(10) # tempo para carregar
 
 
 ## Preparando os itens e Montando o Email

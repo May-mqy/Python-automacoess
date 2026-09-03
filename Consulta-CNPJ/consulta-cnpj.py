@@ -31,7 +31,7 @@ cnpj_azul = "09.296.295/0001-60"
 
 print("Abrindo site...")
 driver = webdriver.Chrome()
-driver.get(site_consulta) #Abrindo o site
+driver.get(site_consulta) #Abrindo o site'
 
 print("Localizando campo CNPJ...")
 campo_cnpj = WebDriverWait(driver, 10).until(
@@ -40,7 +40,7 @@ campo_cnpj = WebDriverWait(driver, 10).until(
 campo_cnpj.send_keys(cnpj_azul)
 
 print("Aperte 'Não sou um Robô'")
-time.sleep(50)
+time.sleep(60)
 
 print("Localizando campo consultar")
 campo_consulta = WebDriverWait(driver, 30).until(
@@ -87,4 +87,6 @@ time.sleep(40)
 input("Teste concluído. Aperte Enter para encerrar.")
 
 
-##CONCLUSÃO TESTES ATÉ 24/07 às 13H --> O programa está entrando no site desejado e conseguindo acessar ele, ele aperta o botão consultar e então ao abrir a nova tela, para imprimir o arquivo, ele não consegue localizar o Botão Imprimir para baixar o arquivo.. fiz mais alguns passos avançados mas não chega nem a rodar por conta dessa falha.
+##CONCLUSÃO TESTES 24/07 às 13H --> O programa está entrando no site desejado e conseguindo acessar ele, ele aperta o botão consultar e então ao abrir a nova tela, para imprimir o arquivo, ele não consegue localizar o Botão Imprimir para baixar o arquivo.. fiz mais alguns passos avançados mas não chega nem a rodar por conta dessa falha.
+
+##TESTE 03/09 às 12h --> O programa rodou bacana ainda, sem necessidade de ajustes, ele consegue teoricamente baixar o arquivo, mas ele não nomeia e nem está salvando no armazenamento, ou seja, melhor focar em pegar as informações da automação diretamente pelo site e não do arquivo. Pelo menos inicialmente, depois eu tento melhorar essa parte!
